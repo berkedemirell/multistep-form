@@ -149,6 +149,7 @@ const spanFree = document.querySelectorAll("#free");
 yearly.addEventListener("click", (e) => {
   e.preventDefault();
   slider.classList.add("translate-x-9");
+  slider.classList.add("mm:translate-x-7");
   arcadeSpan.innerHTML = "$90/yr";
   advancedSpan.innerHTML = "$120/yr";
   proSpan.innerHTML = "$150/yr";
@@ -173,6 +174,7 @@ yearly.addEventListener("click", (e) => {
 monthly.addEventListener("click", (e) => {
   e.preventDefault();
   slider.classList.remove("translate-x-9");
+  slider.classList.remove("mm:translate-x-7");
   monthly.classList.add('text-marine')
   yearly.classList.remove('text-marine')
   yearly.classList.add('text-coolGray')
@@ -363,9 +365,9 @@ submitAdds.addEventListener("click", (e) => {
   `;
 
   let addsHtml = adds.map((el) => {
-    return ` <div class="flex flex-row items-center gap-24">
-      <div class='w-44 mr-12'><span class="text-coolGray font-semibold">${el.add}</span></div>
-      <div><span class="text-marine">${el.price}</span></div>
+    return ` <div class="flex flex-row items-center gap-24 l:gap-12 mm:gap-2">
+      <div class='w-44 l:w-36 mr-12 mm:w-24 mm:text-xs'><span class="text-coolGray font-semibold">${el.add}</span></div>
+      <div><span class="text-marine mm:text-xs">${el.price}</span></div>
     </div>`;
   });
 
@@ -427,11 +429,11 @@ confirmBtn.addEventListener('click', (e) => {
   form4.classList.add('hidden');
 
   let resultHtml = `
-    <div class="flex items-center justify-center w-thanks mt-24">
+    <div class="flex items-center justify-center w-thanks m:w-res-thanks mt-24">
       <div class="flex flex-col items-center justify-center gap-6">
           <img src="./assets/images/icon-thank-you.svg" alt="">
-          <span class="text-3xl text-marine font-semibold">Thank You!</span>
-          <p class="text-center text-coolGray font-semibold">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+          <span class="text-3xl text-marine font-semibold l:text-3xl">Thank You!</span>
+          <p class="text-center text-coolGray font-semibold l:text-sm">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
       </div>
     </div>
   `

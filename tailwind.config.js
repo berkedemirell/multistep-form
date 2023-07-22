@@ -6,9 +6,17 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        'l' : {'max': '1125px'},
+        'm' : {'max': '930px'},
+        'mm' : {'max': '825px'},
+      },
       width: {
         'add-ons' : '30rem',
+        'res-add-ons' : '22rem',
+        'res-add-ons2' : '17rem',
         'thanks' : '25rem',
+        'res-thanks': '20rem',
       },
       fontFamily: {
         'ubu' : ['Ubuntu']
