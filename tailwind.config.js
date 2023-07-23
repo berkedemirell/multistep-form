@@ -10,6 +10,7 @@ module.exports = {
         'l' : {'max': '1125px'},
         'm' : {'max': '930px'},
         'mm' : {'max': '825px'},
+        's' : {'max': '675px'},
       },
       width: {
         'add-ons' : '30rem',
@@ -17,12 +18,14 @@ module.exports = {
         'res-add-ons2' : '17rem',
         'thanks' : '25rem',
         'res-thanks': '20rem',
+        'deneme': '31rem',
       },
       fontFamily: {
         'ubu' : ['Ubuntu']
       },
       backgroundImage: {
         'sidebar' : "url('/assets/images/bg-sidebar-desktop.svg')",
+        'sidebar-mobile' : "url('/assets/images/bg-sidebar-mobile.svg')"
       },
       colors: {
         'marine': 'hsl(213, 96%, 18%)', 

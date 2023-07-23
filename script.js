@@ -429,11 +429,11 @@ confirmBtn.addEventListener('click', (e) => {
   form4.classList.add('hidden');
 
   let resultHtml = `
-    <div class="flex items-center justify-center w-thanks m:w-res-thanks mt-24">
+    <div class="flex items-center justify-center w-thanks m:w-res-thanks s:w-52 s:mt-10 s:pb-6 mt-24">
       <div class="flex flex-col items-center justify-center gap-6">
           <img src="./assets/images/icon-thank-you.svg" alt="">
-          <span class="text-3xl text-marine font-semibold l:text-3xl">Thank You!</span>
-          <p class="text-center text-coolGray font-semibold l:text-sm">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
+          <span class="text-3xl text-marine font-semibold l:text-3xl s:text-2xl">Thank You!</span>
+          <p class="text-center text-coolGray font-semibold l:text-sm s:text-xs">Thanks for confirming your subscription! We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.</p>
       </div>
     </div>
   `
