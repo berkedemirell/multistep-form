@@ -29,19 +29,22 @@ buttonSubmit.addEventListener("click", (e) => {
     emailInput.value.length !== 0 &&
     nameInput.value.length !== 0 &&
     phoneInput.value.length !== 0
-  ) {
-    if (emailInput.value.split("").includes("@")) {
-      form1.classList.add("hidden");
-      step1Span.classList.remove("bg-slate-300");
-      step1Span.classList.add("text-white");
-      step2Span.classList.add("bg-slate-300");
-      step2Span.classList.remove("text-slate-100");
-      form2.classList.remove("hidden");
-    } else {
-      mailError.innerHTML = "Invalid e-mail address";
-      emailInput.classList.add("border-2");
-      emailInput.classList.add("border-red");
-    }
+    ) {
+      if (emailInput.value.split("").includes("@")) {
+        form1.classList.add("hidden");
+        step1Span.classList.remove("bg-slate-300");
+        step1Span.classList.add("text-white");
+        mailError.innerHTML = '';
+        nameError.innerHTML = '';
+        phoneError.innerHTML = '';
+        step2Span.classList.add("bg-slate-300");
+        step2Span.classList.remove("text-slate-100");
+        form2.classList.remove("hidden");
+      } else {
+        mailError.innerHTML = "Invalid e-mail address";
+        emailInput.classList.add("border-2");
+        emailInput.classList.add("border-red");
+      }
   } else {
     if (!emailInput.value.split("").includes("@")) {
       mailError.innerHTML = "Invalid e-mail address";
@@ -62,16 +65,25 @@ buttonSubmit.addEventListener("click", (e) => {
       nameInput.classList.add("border-2");
       nameInput.classList.add("border-red");
     }
+    if (nameInput.value.length !== 0) {
+      nameError.innerHTML = "";
+    }
+    if (phoneInput.value.length !== 0) {
+      phoneError.innerHTML = "";
+    }
+    if (emailInput.value.split("").includes("@")) {
+      mailError.innerHTML = ''
+    }
   }
 
-  setTimeout(() => {
-    mailError.innerHTML = "";
-    phoneError.innerHTML = "";
-    nameError.innerHTML = "";
-    nameInput.classList.remove("border-red");
-    phoneInput.classList.remove("border-red");
-    emailInput.classList.remove("border-red");
-  }, 3000);
+  // setTimeout(() => {
+  //   mailError.innerHTML = "";
+  //   phoneError.innerHTML = "";
+  //   nameError.innerHTML = "";
+  //   nameInput.classList.remove("border-red");
+  //   phoneInput.classList.remove("border-red");
+  //   emailInput.classList.remove("border-red");
+  // }, 3000);
 });
 
 goBack1.addEventListener("click", (e) => {
